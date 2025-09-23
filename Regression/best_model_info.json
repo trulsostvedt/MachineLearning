@@ -1,8 +1,30 @@
 {
-  "best_params": {
-    "poly__degree": 5,
-    "ridge__alpha": 10
+  "winner": "kernel_ridge_rbf",
+  "results": {
+    "poly_ridge": {
+      "best_params": {
+        "poly__degree": 4,
+        "ridge__alpha": 10
+      },
+      "cv_r2_mean": 0.933108596320227,
+      "cv_r2_std": 0.014155560800823133
+    },
+    "poly_lasso": {
+      "best_params": {
+        "lasso__alpha": 0.01,
+        "poly__degree": 4
+      },
+      "cv_r2_mean": 0.9413730769574187,
+      "cv_r2_std": 0.0067469533124386045
+    },
+    "kernel_ridge_rbf": {
+      "best_params": {
+        "kr__alpha": 0.01,
+        "kr__gamma": 0.1
+      },
+      "cv_r2_mean": 0.9828514788918407,
+      "cv_r2_std": 0.002842091276182927
+    }
   },
-  "best_cv_r2": 0.9335314574987905,
-  "model_family": "PolynomialFeatures + StandardScaler + Ridge"
+  "notes": "cv_r2_mean \u00b1 cv_r2_std with 5-fold KFold(shuffle, rs=42). best_model.pkl is trained on all 700."
 }

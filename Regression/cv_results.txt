@@ -1,0 +1,6 @@
+CV Results (5-fold, R^2)
+        poly_ridge: 0.9331 ± 0.0142 | params: {'poly__degree': 4, 'ridge__alpha': 10}
+        poly_lasso: 0.9414 ± 0.0067 | params: {'lasso__alpha': 0.01, 'poly__degree': 4}
+  kernel_ridge_rbf: 0.9829 ± 0.0028 | params: {'kr__alpha': 0.01, 'kr__gamma': 0.1}
+
+Winner: kernel_ridge_rbf
