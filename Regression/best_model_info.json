@@ -1,8 +1,8 @@
 {
   "best_params": {
-    "poly__degree": 4,
+    "poly__degree": 5,
     "ridge__alpha": 10
   },
-  "best_cv_r2": 0.933108596320227,
+  "best_cv_r2": 0.9335314574987905,
   "model_family": "PolynomialFeatures + StandardScaler + Ridge"
 }
