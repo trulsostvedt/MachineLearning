@@ -1,6 +1,4 @@
-# Tests 3 model families (Poly+Ridge, Poly+Lasso, KernelRidge RBF).
-# Saves best_model.pkl (the winner), best_model_info.json (structured),
-# and cv_results.txt (I added this log to use when writing the report, not necessarily for the model).
+# Compare 3 models with 5-fold CV, saves best_model.pkl 
 
 import json, joblib, numpy as np
 from pathlib import Path
@@ -15,9 +13,7 @@ base = Path(__file__).resolve().parent
 X = np.load(base / "X_train.npy")
 y = np.load(base / "Y_train.npy")
 
-cv = KFold(n_splits=5, shuffle=True, random_state=42) 
-# 42 = the answer to life, the universe, and everything - ref to Hitchhiker's Guide to the Galaxy our inside joke
-# when choosing random states :) its "random" but fixed so results are reproducible
+cv = KFold(n_splits=5, shuffle=True, random_state=42) # 42 is a fast seed for reproducibility
 results = {}
 
 def summarize_gs(gs):
